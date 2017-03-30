@@ -1,0 +1,17 @@
+{
+  "name": "@vandium/event-identifier",
+  "version": "1.0.0",
+  "description": "Event Identifier library for AWS Lambda",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --recursive",
+    "coverage": "./node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha -- -R spec --recursive"
+  },
+  "author": "Vandium Software, Inc.",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0"
+  }
+}
