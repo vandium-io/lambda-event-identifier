@@ -1,6 +1,6 @@
 {
   "name": "@vandium/event-identifier",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Event Identifier library for AWS Lambda",
   "main": "lib/index.js",
   "engines": {
