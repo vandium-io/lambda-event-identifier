@@ -21,6 +21,11 @@ describe( 'lib/identify', function() {
             [ 'scheduled' ],
             [ 's3 put', 's3-put', 's3' ],
             [ 's3 delete', 's3-delete', 's3' ],
+            [ 'cloudfront' ],
+            [ 'config' ],
+            [ 'iot-button' ],
+            [ 'kinesis-firehose' ],
+            [ 'sqs' ]
 
         ].forEach( ( testCase ) => {
 
