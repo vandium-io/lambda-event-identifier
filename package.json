@@ -1,10 +1,10 @@
 {
   "name": "@vandium/event-identifier",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Event Identifier library for AWS Lambda",
   "main": "lib/index.js",
   "engines": {
-    "node": ">=4.3.2"
+    "node": ">=6.10.0"
   },
   "repository": {
     "type": "git",
@@ -17,8 +17,8 @@
   "author": "Vandium Software Inc.",
   "license": "BSD-3-Clause",
   "devDependencies": {
-    "chai": "^3.5.0",
+    "chai": "^4.2.0",
     "istanbul": "^0.4.5",
-    "mocha": "^3.2.0"
+    "mocha": "^5.2.0"
   }
 }
