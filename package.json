@@ -1,6 +1,6 @@
 {
   "name": "@vandium/event-identifier",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Event Identifier library for AWS Lambda",
   "main": "lib/index.js",
   "engines": {
@@ -11,14 +11,23 @@
     "url": "https://github.com/vandium-io/lambda-event-identifier.git"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha --recursive",
-    "coverage": "./node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha -- -R spec --recursive"
+    "test": "nyc mocha --recursive"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "include": [
+      "lib/**/*.js"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ]
   },
   "author": "Vandium Software Inc.",
   "license": "BSD-3-Clause",
   "devDependencies": {
     "chai": "^4.2.0",
-    "istanbul": "^0.4.5",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "nyc": "^13.0.1"
   }
 }
