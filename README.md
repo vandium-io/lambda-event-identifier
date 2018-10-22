@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/vandium-io/lambda-event-identifier.svg?branch=master)](https://travis-ci.org/vandium-io/lambda-event-identifier)
-[![npm version](https://badge.fury.io/js/lambda-event-identifier.svg)](https://badge.fury.io/js/lambda-event-identifier)
+[![npm version](https://badge.fury.io/js/@vandium/lambda-event-identifier.svg)](https://badge.fury.io/js/@vandium/lambda-event-identifier)
 
 # lambda-event-identifier
 
