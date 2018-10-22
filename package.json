@@ -4,7 +4,7 @@
   "description": "Event Identifier library for AWS Lambda",
   "main": "lib/index.js",
   "engines": {
-    "node": ">=6.10.0"
+    "node": ">=8.10.0"
   },
   "repository": {
     "type": "git",
