@@ -18,8 +18,9 @@ Install via npm.
 
 ## Getting Started
 
-To use the library, call the `identify()` function which will return the service name or `unknown` if the
-service cannot be determined.
+To use the library, call the `identify()` function which will return information
+about the event. Currently the `type` of the event is set in the object or
+`unknown`.
 
 ```js
 const identifier = require( '@vandium/event-identifier' );
@@ -27,7 +28,7 @@ const identifier = require( '@vandium/event-identifier' );
 // handler for s3 events
 exports.handler = function( event, context, callback ) {
 
-    if( identifier.indentify( event ) !== 's3' ) {
+    if( identifier.indentify( event ).type !== 's3' ) {
 
         return callback( new Error( 'not s3 service!' ) );
     }
@@ -35,6 +36,9 @@ exports.handler = function( event, context, callback ) {
     callback( null, 'success!' );
 }
 ```
+
+For CloudWatch events, the object will contain have the `type` set to
+`cloudwatch` and the `source` set to the service that fired the event.
 
 ## Feedback
 

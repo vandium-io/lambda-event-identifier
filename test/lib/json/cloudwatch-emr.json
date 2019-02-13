@@ -1,0 +1,17 @@
+{
+   "version":"0",
+   "id":"2f8147ab-8c48-47c6-b0b6-3ee23ec8d300",
+   "detail-type":"EMR Auto Scaling Policy State Change",
+   "source":"aws.emr",
+   "account":"123456789012",
+   "time":"2016-12-16T20:42:44Z",
+   "region":"us-east-1",
+   "resources":[],
+   "detail":{
+      "resourceId":"ig-X2LBMHTGPCBU",
+      "clusterId":"j-1YONHTCP3YZKC",
+      "state":"PENDING",
+      "message":"AutoScaling policy modified by user request",
+      "scalingResourceType":"INSTANCE_GROUP"
+   }
+}

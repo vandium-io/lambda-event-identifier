@@ -1,54 +1,35 @@
 'use strict';
 
+/*jshint expr: true*/
+
 const expect = require( 'chai' ).expect;
 
-const identify = require( '../../lib/identify' );
+const identifier = require( '../../../lib/identifiers/record' );
 
-describe( 'lib/identify', function() {
+describe( 'lib/identifiers/record', function() {
 
     describe( '.identify', function() {
 
         [
-            [ 'apigateway' ],
-            [ 'cloudformation' ],
-            [ 'cloudwatch' ],
-            [ 'dynamodb' ],
-            [ 'kinesis' ],
-            [ 'cognito' ],
-            [ 'lex' ],
-            [ 'sns' ],
-            [ 'ses' ],
-            [ 'scheduled' ],
-            [ 's3 put', 's3-put', 's3' ],
-            [ 's3 delete', 's3-delete', 's3' ],
-            [ 'cloudfront' ],
-            [ 'config' ],
-            [ 'iot-button' ],
-            [ 'kinesis-firehose' ],
-            [ 'sqs' ]
+            'cloudfront',
+            'dynamodb',
+            'kinesis-firehose',
+            'kinesis',
+            's3',
+            'ses',
+            'sns',
+            'sqs'
 
         ].forEach( ( testCase ) => {
 
-            let desc, sourceFile, id;
+            let event = require( `../json/${testCase}.json`  );
 
-            if( testCase.length === 1 ) {
+            it( `${testCase} event source`, function() {
 
-                desc = testCase[0];
-                sourceFile = testCase[0];
-                id = testCase[0];
-            }
-            else {
+                let result = identifier.identify( event );
 
-                desc = testCase[0];
-                sourceFile = testCase[1];
-                id = testCase[2];
-            }
-
-            let event = require( `./json/${sourceFile}.json`  );
-
-            it( `${desc} event source`, function() {
-
-                expect( identify( event ) ).to.equal( id );
+                expect( result ).to.exist;
+                expect( result ).to.eql( { type: testCase } );
             });
         });
 
@@ -74,7 +55,10 @@ describe( 'lib/identify', function() {
                 ]
             };
 
-            expect( identify( event ) ).to.equal( 'whatever' );
+            let result = identifier.identify( event );
+
+            expect( result ).to.exist;
+            expect( result ).to.eql( { type: 'whatever' } );
         });
 
         it( 'other record based event with "eventSource" with out "aws:xxxxx"', function() {
@@ -99,7 +83,9 @@ describe( 'lib/identify', function() {
                 ]
             };
 
-            expect( identify( event ) ).to.equal( 'unknown' );
+            let result = identifier.identify( event );
+
+            expect( result ).to.not.exist;
         });
 
         it( 'other record based event without "eventSource"', function() {
@@ -123,17 +109,30 @@ describe( 'lib/identify', function() {
                 ]
             };
 
-            expect( identify( event ) ).to.equal( 'unknown' );
+            let result = identifier.identify( event );
+
+            expect( result ).to.not.exist;
         });
 
-        it( 'unknown event', function() {
+        it( 'No records', function() {
 
             let event = {
-
-                whatever: true
+                "Records": []
             };
 
-            expect( identify( event ) ).to.equal( 'unknown' );
+            let result = identifier.identify( event );
+
+            expect( result ).to.not.exist;
+        });
+
+        it( 'unknown type', function() {
+
+            // non-cloudwatch event
+            let event = require( '../json/apigateway.json' );
+
+            let result = identifier.identify( event );
+
+            expect( result ).to.not.exist;
         });
     });
 });

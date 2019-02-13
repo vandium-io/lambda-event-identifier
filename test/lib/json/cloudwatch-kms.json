@@ -1,0 +1,15 @@
+{
+  "version": "0",
+  "id": "6a7e8feb-b491-4cf7-a9f1-bf3703467718",
+  "detail-type": "KMS CMK Rotation",
+  "source": "aws.kms",
+  "account": "111122223333",
+  "time": "2016-08-25T21:05:33Z",
+  "region": "us-west-2",
+  "resources": [
+    "arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"
+  ],
+  "detail": {
+    "key-id": "1234abcd-12ab-34cd-56ef-1234567890ab"
+  }
+}

@@ -1,0 +1,67 @@
+{
+    "version": "0",
+    "id": "844e2571-85d4-695f-b930-0153b71dcb42",
+    "detail-type": "SageMaker Training Job State Change",
+    "source": "aws.sagemaker",
+    "account": "123456789012",
+    "time": "2018-10-06T12:26:13Z",
+    "region": "us-east-1",
+    "resources": [
+        "arn:aws:sagemaker:us-east-1:123456789012:training-job/kmeans-1"
+    ],
+    "detail": {
+        "TrainingJobName": "89c96cc8-dded-4739-afcc-6f1dc936701d",
+        "TrainingJobArn": "arn:aws:sagemaker:us-east-1:123456789012:training-job/kmeans-1",
+        "TrainingJobStatus": "Completed",
+        "SecondaryStatus": "Completed",
+        "HyperParameters": {
+            "Hyper": "Parameters"
+        },
+        "AlgorithmSpecification": {
+            "TrainingImage": "TrainingImage",
+            "TrainingInputMode": "TrainingInputMode"
+        },
+        "RoleArn": "a little teapot, some little teapot",
+        "InputDataConfig": [
+            {
+                "ChannelName": "Train",
+                "DataSource": {
+                    "S3DataSource": {
+                        "S3DataType": "S3DataType",
+                        "S3Uri": "S3Uri",
+                        "S3DataDistributionType": "S3DataDistributionType"
+                    }
+                },
+                "ContentType": "ContentType",
+                "CompressionType": "CompressionType",
+                "RecordWrapperType": "RecordWrapperType"
+            }
+        ],
+        "OutputDataConfig": {
+            "KmsKeyId": "KmsKeyId",
+            "S3OutputPath": "S3OutputPath"
+        },
+        "ResourceConfig": {
+            "InstanceType": "InstanceType",
+            "InstanceCount": 3,
+            "VolumeSizeInGB": 20,
+            "VolumeKmsKeyId": "VolumeKmsKeyId"
+        },
+        "VpcConfig": {
+
+        },
+        "StoppingCondition": {
+            "MaxRuntimeInSeconds": 60
+        },
+        "CreationTime": "2018-10-06T12:26:13Z",
+        "TrainingStartTime": "2018-10-06T12:26:13Z",
+        "TrainingEndTime": "2018-10-06T12:26:13Z",
+        "LastModifiedTime": "2018-10-06T12:26:13Z",
+        "SecondaryStatusTransitions": [
+
+        ],
+        "Tags": {
+
+        }
+    }
+}

@@ -1,5 +1,15 @@
 # Change Log
 
+## 3.0.0 (TBD)
+
+Breaking:
+
+* Returns an object rather than a string indicating the type of event
+
+New:
+
+* Supports different cloudwatch event sources
+
 ## 2.0.0 (2018-10-22)
 
 Updated:

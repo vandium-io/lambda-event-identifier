@@ -1,0 +1,11 @@
+{
+    "version": "0",
+    "id": "cd2d702e-ab31-411b-9344-793ce56b1bc7",
+    "detail-type": "GuardDuty Finding",
+    "source": "aws.guardduty",
+    "account": "111122223333",
+    "time": "1970-01-01T00:00:00Z",
+    "region": "us-east-1",
+    "resources": [],
+    "detail": {}
+}

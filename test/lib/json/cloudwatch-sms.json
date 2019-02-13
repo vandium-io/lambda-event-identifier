@@ -1,0 +1,18 @@
+{
+    "version": "0",
+    "id": "5630992d-92cd-439f-f2a8-92c8212aee24",
+    "detail-type": "Server Migration Job State Change",
+    "source": "aws.sms",
+    "account": "123456789012",
+    "time": "2018-02-07T22:30:11Z",
+    "region": "us-west-1",
+    "resources": [
+        "arn:aws:sms:us-west-1:123456789012:sms-job-21a64348"
+    ],
+    "detail": {
+        "state": "Deleted",
+        "replication-run-id": "N/A",
+        "replication-job-id": "sms-job-21a64348",
+        "version": "1.0"
+    }
+}

@@ -1,10 +1,12 @@
 'use strict';
 
+/*jshint expr: true*/
+
 const expect = require( 'chai' ).expect;
 
-const identify = require( '../../lib/identify' );
+const index = require( '../../lib/index' );
 
-const identity = require( '../../lib' );
+const identifiers = require( '../../lib/identifiers/index' );
 
 describe( 'lib/index', function() {
 
@@ -13,7 +15,8 @@ describe( 'lib/index', function() {
         it( 'normal operation', function() {
 
             // should be identify function
-            expect( identity.identify ).to.equal( identify );
+            expect( index.identify ).to.exist;
+            expect( index.identify ).to.equal( identifiers.identify );
         });
     });
 });

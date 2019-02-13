@@ -1,0 +1,23 @@
+{
+  "version": "0",
+  "id": "dc5fa8df-48f1-2108-b1b9-1fe5ebcf2296",
+  "detail-type": "OpsWorks Instance State Change",
+  "source": "aws.opsworks",
+  "account": "123456789012",
+  "time": "2018-01-25T11:12:23Z",
+  "region": "us-east-1",
+  "resources": [
+    "arn:aws:opsworks:us-east-1:123456789012:instance/a648d98f-fdd8-4323-952a-a50z3e4z500z"
+  ],
+  "detail": {
+    "initiated_by": "user",
+    "hostname": "testing1",
+    "stack-id": "acd3df16-e859-4598-8414-377b12a902da",
+    "layer-ids": [
+      "d1a0cb7f-c7e9-4a63-811c-976f0267b2c8"
+    ],
+    "instance-id": "a648d98f-fdd8-4323-952a-a50z3e4z500z",
+    "ec2-instance-id": "i-08b1c2b67aa292276",
+    "status": "requested"
+  }
+}
