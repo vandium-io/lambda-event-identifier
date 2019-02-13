@@ -1,6 +1,6 @@
 # Change Log
 
-## 3.0.0 (TBD)
+## 3.0.0 (2019-02-13)
 
 Breaking:
 
