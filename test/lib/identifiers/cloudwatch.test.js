@@ -50,7 +50,7 @@ describe( 'lib/identifiers/cloudwatch', function() {
             else {
 
                 source = testCase;
-                sourceFile = 'cloudWatch-' + testCase.split( '.' )[1];
+                sourceFile = 'cloudwatch-' + testCase.split( '.' )[1];
             }
 
             let event = require( `../json/${sourceFile}.json`  );
